@@ -1,0 +1,427 @@
+@font-face{
+    font-family : "ExtraLight";
+    src : url('../fonts/ExtraLight.otf');
+}
+@font-face{
+    font-family : "Didot";
+    src : url('../fonts/Didot.ttc');
+}
+@font-face{
+    font-family : "Seravek";
+    src : url('../fonts/Seravek.ttc');
+}
+@font-face{
+    font-family : "Miso";
+    src : url('../fonts/Miso.ttf');
+}
+body, html{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+a{
+            color:black;
+            text-decoration: none;
+        }
+a:visited{
+        text-decoration: none;
+        color: black;
+        }
+    header{
+        background-color: white;
+        max-height: 10vh;
+        min-height: 10vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 3;
+    }
+        header>a{
+            height: 10vh;
+            margin: 0.3% 0 0 3%;
+        }
+        header>a img{
+            height: 9vh;
+        }
+        header>nav{
+            float: right;
+            display: inline-block;
+            line-height: 10vh;
+            padding-right: 5vw;
+        }
+        header>nav a{
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2vh;
+            margin-left: 1vw;
+            color:#6e7f89;
+        }
+        header>nav a:visited{
+        text-decoration: none;
+        color: #6e7f89;
+        }
+    .popImages{
+        display: none;
+        margin-top: 10vh;
+        height: 90vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        z-index: 2;
+        text-align: center;
+    }
+        .popImages>div{
+            position: relative;
+            top: 25%;
+            height: 100vh;
+            width: 100vw;
+        }
+        .popImages img{
+            max-height: 60vh;
+
+       
+        }
+    .index{
+        text-align: center;
+        color: white;
+        height: 90vh;
+        background-color: #796772;
+        line-height: 80vh;
+    }
+        .index>div{
+            vertical-align:middle;
+            display:inline-block;
+            line-height:1.2;
+            text-align:center; 
+        }
+            .index>div h1{
+                font-size: 5vh;
+                font-family: Seravek;
+                font-weight: 100;
+            }
+            .index>div h2{
+                font-size: 4vh;
+                font-family: Didot;
+                color: #d7d3d6;
+            }
+    .aPropos{
+        padding-top: 10vh;
+        height: 90vh;
+        text-align: center;
+    }
+        .aPropos>h1{
+            margin-bottom: 5vh;
+            font-size: 4vh;
+            font-family: Didot;
+            text-transform: uppercase;
+        }
+        .aPropos>p{
+            width: 80vw;
+            margin: 0 auto 0 auto;
+            font-size: 2.5vh;
+            font-family: Seravek;
+            color: #6e7f89;
+        }
+    .projets{
+        padding-top: 10vh;
+        text-align: center;
+    }
+        .projets>h1{
+            font-size: 4vh;
+            padding: 5vh 5vw 5vh 5vw;
+            font-family: Didot;
+            text-transform: uppercase;
+        }
+        .projets>div{
+            background-repeat: no-repeat;
+            margin: 3vh auto 3vh auto;
+            width: 70vw;
+            height: 20vh;
+            background-color: grey;
+            padding-top: 30vh;
+            font-size: 5vh;
+            text-transform: uppercase;
+            font-family: Miso;
+            color: white;
+            background-size: 100% 100%;
+        }
+            .photography{
+                background-image: url(../images/photography.jpg);
+            }
+            .photoshop{
+                background-image: url(../images/photoshop.jpg);
+            }
+            .illustrator{
+                background-image: url(../images/illustrator.jpg);   
+                         }
+    .contact{
+        padding-top: 10vh;
+        text-align: center;
+    }
+        .contact>h1{
+            font-size: 4vh;
+            padding: 5vh;
+            font-family: Didot;
+            text-transform: uppercase;
+        }
+        .contact>form{
+            height: 60vh;
+            width: 67vw;
+            border: 0.4vh dotted black;
+            text-align: left;
+            margin: 0 auto 0 auto;
+            padding-top: 7vh;
+            padding-left: 3vw;
+            background-color: #efeff4;
+            text-align: center;
+        }
+            .contact>form input{
+                margin : 1vh 0 1vh -25vw;
+                height: 5vh;
+                width: 40vw;
+                border: 1px solid black;
+                background-color: #efeff4;
+                font-size: 3vh;
+                font-family: Didot;
+            }
+            .contact>form textarea{
+                height: 20vh;
+                width: 40vw;
+                margin:1vh 0 4vh -25vw;
+                background-color: #efeff4;
+                border: 1px solid black;
+                overflow: auto;
+                outline: none;
+                resize: none;
+                font-size: 3vh;
+                font-family: Didot;
+            }
+            .contact button{
+                background-color: #efeff4;
+                border: 1px solid black;
+                margin-bottom: 2vh;
+                width: 10vw;
+                height: 5vh;
+                font-size: 3vh;
+                font-family: ExtraLight;
+            }
+        .contact>table {
+            color: black;
+            font-family: Seravek;
+            margin: 2vh auto;
+    }
+        .contact>table img{
+            height: 4vh;
+            margin:0 1vw 0 3vw;
+    }
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+
+
+
+
+
+branch: master  bxslider-4/dist/jquery.bxslider.css
+@Tidal-WaveTidal-Wave on Feb 8 bxSlider 4.1.2 freezes on touch devices #540
+1 contributor
+RawBlameHistory     183 lines (182 sloc)  4.043 kb
+    /***
+     * BxSlider v4.2.2 - Fully loaded, responsive content slider
+     * http://bxslider.com
+     *
+     * Written by: Steven Wanderski, 2014
+     * http://stevenwanderski.com
+     * (while drinking Belgian ales and listening to jazz)
+     *
+     * CEO and founder of bxCreative, LTD
+     * http://bxcreative.com
+     ***/
+    /** RESET AND LAYOUT
+    ===================================*/
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 0;
+    *zoom: 1;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+.bxslider {
+    margin: 0;
+    padding: 0;
+}
+ul.bxslider {
+    list-style: none;
+}
+.bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+}
+/** THEME
+===================================*/
+.bx-wrapper {
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+    background: #fff;
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+/* LOADER */
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(images/bx_loader.gif) center center no-repeat #ffffff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+/* PAGER */
+.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #000;
+}
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+.bx-wrapper .bx-pager-item {
+    font-size: 0;
+    line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+    left: 10px;
+    background: url(images/controls.png) no-repeat 0 -32px;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+    background-position: 0 0;
+}
+.bx-wrapper .bx-next {
+    right: 10px;
+    background: url(images/controls.png) no-repeat -43px -32px;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+    background-position: -43px 0;
+}
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+    text-align: center;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -11px no-repeat;
+    margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+    background-position: -86px 0;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    text-indent: -9999px;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -44px no-repeat;
+    margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus {
+    background-position: -86px -33px;
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+}
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+}
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: Arial;
+    display: block;
+    font-size: .85em;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
