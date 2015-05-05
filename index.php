@@ -1,3 +1,22 @@
+<?php 
+if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_POST['comment']) && isset($_POST['phone'])){
+    if(!empty($_POST['name']) && !empty($_POST['mail']) && !empty($_POST['comment']) && !empty($_POST['phone'])){
+        $destinataire = "ines.maron@supinternet.fr";
+        $sujet = "Demande de contact";
+        $message = "Nom : ".$_POST['name']."\r\n";
+        $message = "Adresse email : ".$_POST['mail']."\r\n";
+        $message = "Message : ".$_POST['comment']."\r\n";
+        $entete = 'From: '.$_POST['mail']."\r\n".
+            'Reply-To: '.$_POST['mail']."\r\n".
+        'X-Mailer: PHP/'.phpversion();
+        if (mail($destinataire,$sujet,$message,$entete)){
+            echo 'Message envoyé';
+        } else {
+            echo "Une erreur est survenue lors de l'envoi du formulaire par email";
+        }
+    }
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,12 +109,12 @@
         </div>
         <div id="contact" class="contact">
             <h1>Contactez-moi</h1>
-            <form action="#contact">
-                <input type="text" placeholder="Nom"><br>
-                <input type="number" placeholder="Numéro de téléphone"><br>
-                <input type="email" placeholder="Adressez email"><br>
+            <form action="index.php" method="post">
+                <input type="text" placeholder="Nom" name="name"><br>
+                <input type="number" placeholder="Numéro de téléphone" name="phone"><br>
+                <input type="email" placeholder="Adressez email" name="mail"><br>
                 <textarea name="comment" id="" cols="30" rows="10" placeholder="Commentaire"></textarea><br>
-                <button type="submit">Envoyer</button>
+                <input type="submit">
             </form>
             <table>
                 <tr>

@@ -196,7 +196,7 @@ a:visited{
                 font-size: 3vh;
                 font-family: Didot;
             }
-            .contact button{
+            .contact input[type=submit]{
                 background-color: #efeff4;
                 border: 1px solid black;
                 margin-bottom: 2vh;
