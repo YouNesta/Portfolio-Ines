@@ -10,10 +10,12 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
             'Reply-To: '.$_POST['mail']."\r\n".
         'X-Mailer: PHP/'.phpversion();
         if (mail($destinataire,$sujet,$message,$entete)){
-            echo 'Message envoyé';
+            $result = 'Message envoyé';
         } else {
-            echo "Une erreur est survenue lors de l'envoi du formulaire par email";
+            $result =  "Une erreur est survenue lors de l'envoi du formulaire par email";
         }
+    }else{
+        $result = "Veuillez remplir toutes les informations";
     }
 }
  ?>
@@ -109,7 +111,10 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
         </div>
         <div id="contact" class="contact">
             <h1>Contactez-moi</h1>
-            <form action="index.php" method="post">
+            <form action="#contact" method="post">
+                <?php if (isset($result)) {
+                    echo '<h1>'.$result.'</h1>';
+                } ?>
                 <input type="text" placeholder="Nom" name="name"><br>
                 <input type="number" placeholder="Numéro de téléphone" name="phone"><br>
                 <input type="email" placeholder="Adressez email" name="mail"><br>
