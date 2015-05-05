@@ -27,12 +27,11 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="icon" href="asset/images/favicon.ico" />
-    <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>  
-    <script type="text/javascript" src="asset/js/jquery.easing.1.3.js"></script>
-
-    <script src="http://unslider.com/unslider.min.js"></script>
-
-   
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="asset/js/jquery-1.9.1.min.js"></script>
+    <script src="asset/js/owl.carousel.js"></script>
+    <link rel="stylesheet" href="asset/css/owl.carousel.css">
+    <link rel="stylesheet" href="asset/css/owl.theme.css">
 </head>
 <body>
     <div class="wrapper" id="wrapper">
@@ -47,39 +46,28 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
     </header>
     
         <div class="popImages">
-            <a href="#" class="unslider-arrow prev">Previous slide</a>
-<a href="#" class="unslider-arrow next">Next slide</a>
         <div class="banner" id="photographySlide">
-            <ul >
-                <li><img src="asset/images/photography/Photo01.jpg" alt=""></li>
-                <li><img src="asset/images/photography/Photo02.jpg" alt=""></li>
-                <li><img src="asset/images/photography/Photo03.jpg" alt=""></li>
-                <li><img src="asset/images/photography/Photo04.jpg" alt=""></li>
-                <li><img src="asset/images/photography/Photo05.jpg" alt=""></li>
-            </ul>
-            
-            
+                <div><img src="asset/images/photography/Photo01.jpg" alt=""></div>
+                <div><img src="asset/images/photography/Photo02.jpg" alt=""></div>
+                <div><img src="asset/images/photography/Photo03.jpg" alt=""></div>
+                <div><img src="asset/images/photography/Photo04.jpg" alt=""></div>
+                <div><img src="asset/images/photography/Photo05.jpg" alt=""></div>    
 </div>
 <div class="banner" id="photoshopSlide">
-    <ul >
-                <li><img src="asset/images/photoshop/Photo01.jpg" alt=""></li>
-                <li><img src="asset/images/photoshop/Photo02.jpg" alt=""></li>
-                <li><img src="asset/images/photoshop/Photo03.jpg" alt=""></li>
-                <li><img src="asset/images/photoshop/Photo04.jpg" alt=""></li>
-                <li><img src="asset/images/photoshop/Photo05.jpg" alt=""></li>
-                <li><img src="asset/images/photoshop/Photo06.jpg" alt=""></li>
-                <li><img src="asset/images/photoshop/Photo07.jpg" alt=""></li>
-                <li><img src="asset/images/photoshop/Photo08.jpg" alt=""></li>
-            </ul>
+                <div><img src="asset/images/photoshop/Photo01.jpg" alt=""></div>
+                <div><img src="asset/images/photoshop/Photo02.jpg" alt=""></div>
+                <div><img src="asset/images/photoshop/Photo03.jpg" alt=""></div>
+                <div><img src="asset/images/photoshop/Photo04.jpg" alt=""></div>
+                <div><img src="asset/images/photoshop/Photo05.jpg" alt=""></div>
+                <div><img src="asset/images/photoshop/Photo06.jpg" alt=""></div>
+                <div><img src="asset/images/photoshop/Photo07.jpg" alt=""></div>
 </div>
 <div class="banner" id="illustratorSlide">
-    <ul >
-                <li><img src="asset/images/illustrator/Photo01.jpg" alt=""></li>
-                <li><img src="asset/images/illustrator/Photo02.jpg" alt=""></li>
-                <li><img src="asset/images/illustrator/Photo03.jpg" alt=""></li>
-                <li><img src="asset/images/illustrator/Photo04.jpg" alt=""></li>
-                <li><img src="asset/images/illustrator/Photo05.jpg" alt=""></li>
-            </ul>
+                <div><img src="asset/images/illustrator/Photo01.jpg" alt=""></div>
+                <div><img src="asset/images/illustrator/Photo02.jpg" alt=""></div>
+                <div><img src="asset/images/illustrator/Photo03.jpg" alt=""></div>
+                <div><img src="asset/images/illustrator/Photo04.jpg" alt=""></div>
+                <div><img src="asset/images/illustrator/Photo05.jpg" alt=""></div>
 </div>
     </div>
         <div id="index" class="index">
@@ -132,46 +120,29 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
 </div>
     <script type="text/javascript">
             $(function(){
+                $('nav a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+
                 $('#projets div').click(function(event){
                     var $image = $(this).attr('id');
                     $(".popImages" ).show("slow",function(){
                         if ($image == 'photography') {
                             $('#illustratorSlide').css('display', 'none');
                             $('#photoshopSlide').css('display', 'none');
-                            $('.banner').unslider({
-    speed: 500,               //  The speed to animate each slide (in milliseconds)
-    delay: 5000,              //  The delay between slide animations (in milliseconds)
-    complete: function() {},  //  A function that gets called after every slide animation
-    keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-    dots: true,               //  Display dot navigation
-    fluid: true              //  Support responsive design. May break non-responsive designs
-});
                             $('#photographySlide').css('display', 'block');
                             
                         }else if ($image == 'photoshop') {
                             $('#photographySlide').css('display', 'none');
                             $('#illustratorSlide').css('display', 'none');
-                          $('.banner').unslider({
-    speed: 500,               //  The speed to animate each slide (in milliseconds)
-    delay: 5000,              //  The delay between slide animations (in milliseconds)
-    complete: function() {},  //  A function that gets called after every slide animation
-    keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-    dots: true,               //  Display dot navigation
-    fluid: true              //  Support responsive design. May break non-responsive designs
-});
                             $('#photoshopSlide').css('display', 'block');
                             
                         }else if ($image == 'illustrator') {
                             $('#photographySlide').css('display', 'none');
                             $('#photoshopSlide').css('display', 'none');
-                            $('.banner').unslider({
-    speed: 500,               //  The speed to animate each slide (in milliseconds)
-    delay: 5000,              //  The delay between slide animations (in milliseconds)
-    complete: function() {},  //  A function that gets called after every slide animation
-    keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-    dots: true,               //  Display dot navigation
-    fluid: true              //  Support responsive design. May break non-responsive designs
-});
                             $('#illustratorSlide').css('display', 'block');
                             
                         };
@@ -186,6 +157,12 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
                             $('.banner ').css('display', 'none');
                             });
                         };  
+                    });
+                    $(document).ready(function() {
+                          $(".banner").owlCarousel({items : 1,
+                           navigation : true, responsiveBaseWidth: window, autoHeight : false})});
+                    $('.banner').click(function(event){
+                        event.stopPropagation();
                     });
                
             });

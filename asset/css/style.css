@@ -71,12 +71,14 @@ a:visited{
     }
         .popImages>div{
             position: relative;
-            top: 25%;
-            height: 100vh;
-            width: 100vw;
+            top:12.5%;
+            background-color: white;
+            width: 60vw;
+            margin: 0 auto;
         }
         .popImages img{
             max-height: 60vh;
+            max-width: 60vw;
 
        
         }
@@ -214,9 +216,9 @@ a:visited{
             height: 4vh;
             margin:0 1vw 0 3vw;
     }
-.banner { position: relative; overflow: auto; }
+/*.banner { position: relative; overflow: auto; }
     .banner li { list-style: none; }
-        .banner ul li { float: left; }
+        .banner ul li { float: left; }*/
 
 
 
