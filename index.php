@@ -160,7 +160,7 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
                     });
                     $(document).ready(function() {
                           $(".banner").owlCarousel({items : 1,
-                           navigation : true, autoHeight : false,navigationText : ["Précédent","Suivant"]})});
+                           navigation : true, autoHeight : false,navigationText : ["Précédent","Suivant"], itemsDesktop : false})});
                     $('.banner').click(function(event){
                         event.stopPropagation();
                     });
