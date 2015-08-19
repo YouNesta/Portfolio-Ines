@@ -105,7 +105,7 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
                 } ?>
                 <input type="text" placeholder="Nom" name="name"><br>
                 <input type="number" placeholder="Numéro de téléphone" name="phone"><br>
-                <input type="email" placeholder="Adresse-email" name="mail"><br>
+                <input type="email" placeholder="Adressez email" name="mail"><br>
                 <textarea name="comment" id="" cols="30" rows="10" placeholder="Commentaire"></textarea><br>
                 <input type="submit">
             </form>
@@ -160,7 +160,7 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['mail']) && isset($_PO
                     });
                     $(document).ready(function() {
                           $(".banner").owlCarousel({items : 1,
-                           navigation : true, autoHeight : false,navigationText : ["Précédent","Suivant"], itemsDesktop : false})});
+                           navigation : true, autoHeight : false,navigationText : ["Précédent","Suivant"]})});
                     $('.banner').click(function(event){
                         event.stopPropagation();
                     });
